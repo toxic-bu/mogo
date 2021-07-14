@@ -1,4 +1,5 @@
-(function () {
+window.addEventListener("load", () => {
+    // #burger-menu
     const burger = document.querySelector(".nav__burger");
     const nav = document.querySelector(".nav__menu");
     const links = document.querySelectorAll(".nav__link");
@@ -13,9 +14,9 @@
             }
         });
     });
-})();
-123;
-window.addEventListener("load", () => {
+    // #burger-menu
+
+    // #main-slider
     let i = 0;
     let timer;
     const loadbar = document.querySelectorAll(".caption__slider-loadbar");
@@ -76,4 +77,5 @@ window.addEventListener("load", () => {
             tabs[i].classList.add("active");
         }, interval);
     }
+    // #main-slider
 });
