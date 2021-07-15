@@ -2,17 +2,14 @@ window.addEventListener("load", () => {
     // #burger-menu
     const burger = document.querySelector(".nav__burger");
     const nav = document.querySelector(".nav__menu");
-    const links = document.querySelectorAll(".nav__link");
     burger.addEventListener("click", () => {
-        burger.classList.toggle("burger_active");
-        nav.classList.toggle("nav_active");
-        links.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = "";
-            } else {
-                link.style.animation = "menuLinksFade";
-            }
-        });
+        burger.classList.toggle("burger-active");
+        nav.classList.toggle("nav-out");
+    });
+    nav.addEventListener("click", (el) => {
+        if (el.target.classList.contains("nav__menu")) {
+            nav.classList.toggle("nav-out");
+        }
     });
     // #burger-menu
 
