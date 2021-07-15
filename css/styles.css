@@ -2,12 +2,16 @@ html,
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
-
+body.fixed {
+    position: fixed;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .main .container {
     height: 100%;
     display: flex;
@@ -283,6 +287,7 @@ body {
         padding-left: 25px;
     }
     .nav__burger {
+        right: 0;
         cursor: pointer;
         z-index: 15;
         width: 50px;
