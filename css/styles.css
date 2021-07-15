@@ -4,9 +4,7 @@ body {
     padding: 0;
     width: 100%;
 }
-body.fixed {
-    position: fixed;
-}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -259,6 +257,9 @@ body.fixed {
     }
 }
 @media (max-width: 576px) {
+    body.fixed {
+        position: fixed;
+    }
     .nav__logo {
         font-size: 40px;
         z-index: 15;
