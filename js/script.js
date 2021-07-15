@@ -9,6 +9,7 @@ window.addEventListener("load", () => {
     nav.addEventListener("click", (el) => {
         if (el.target.classList.contains("nav__menu")) {
             nav.classList.toggle("nav-out");
+            burger.classList.toggle("burger-active");
         }
     });
     // #burger-menu
