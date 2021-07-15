@@ -275,10 +275,13 @@ body {
         top: -100%;
         width: 100%;
         background-color: rgb(244, 139, 130, 0.9);
+        transition: 1s;
+        opacity: 0;
         z-index: 10;
     }
     .nav__menu.nav-out {
-        animation: menuOut 1s ease forwards;
+        top: 0;
+        opacity: 1;
     }
     .nav__link {
         margin-left: 25px;
@@ -315,11 +318,5 @@ body {
         background-repeat: no-repeat;
         background-position: center;
         font-size: larger;
-    }
-}
-
-@keyframes menuOut {
-    100% {
-        top: 0;
     }
 }
