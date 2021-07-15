@@ -274,14 +274,14 @@ body {
         flex-direction: column;
         top: -100%;
         width: 100%;
-        background-color: rgb(244, 139, 130, 0.9);
+        background-color: rgb(244, 139, 130);
         transition: 1s;
         opacity: 0;
         z-index: 10;
     }
     .nav__menu.nav-out {
         top: 0;
-        opacity: 1;
+        opacity: 0.9;
     }
     .nav__link {
         margin-left: 25px;
