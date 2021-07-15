@@ -278,13 +278,15 @@ body.fixed {
     .nav__menu.nav-out {
         animation: menuOut 1s ease forwards;
     }
+    .nav__link {
+        margin-left: 25px;
+    }
     .nav__link:first-child {
         margin-top: 80px;
     }
     .nav__link a {
         font-size: 30px;
         font-weight: 700;
-        padding-left: 25px;
     }
     .nav__burger {
         right: 0;
