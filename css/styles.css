@@ -386,7 +386,7 @@ body {
     margin-bottom: 110px;
 }
 .wedo-img-wrapper {
-    margin-right: 10px;
+    margin-right: 15px;
 }
 .wedo-img-wrapper:last-child {
     margin-right: 0;
@@ -404,6 +404,7 @@ body {
 }
 .wedo-img-wrapper:hover > img {
     transform: translate(-10px, -10px);
+    box-shadow: 20px 20px 14px -1px rgba(34, 60, 80, 0.2);
 }
 .wedo-img-wrapper:hover .wedo-img-background {
     transform: translate(-10px, -10px);
