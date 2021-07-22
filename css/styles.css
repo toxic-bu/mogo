@@ -243,11 +243,9 @@ body {
     background-color: #f2ddff;
 }
 @media (max-width: 1200px) {
-    .nav__logo {
-        padding-left: 20px;
-    }
-    .nav__menu {
-        padding-right: 20px;
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .caption__slider-nav {
         margin: 0 20px 15px;
@@ -348,7 +346,6 @@ body {
         z-index: 15;
         width: 50px;
         height: 50px;
-        margin-right: 20px;
         display: inline-block;
         background-image: url("https://img.icons8.com/ios-glyphs/30/ffffff/menu--v1.png");
         background-size: contain;
@@ -399,7 +396,7 @@ body {
 .wedo-img-wrapper img {
     width: 100%;
     height: 100%;
-    transition: 0.5s;
+    transition: 0.5s ease-out;
     display: block;
 }
 .wedo-img-wrapper:hover > img {
@@ -417,7 +414,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: 0.5s;
+    transition: 0.5s ease-out;
     opacity: 0;
     display: flex;
     flex-direction: column;
@@ -465,14 +462,7 @@ body {
     background-color: #f38181;
     margin: 40px auto 0;
 }
-@media (max-width: 1200px) {
-    .wedo-img {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-}
-@media (max-width: 992px) {
-}
+
 @media (max-width: 768px) {
     .wedo-img {
         flex-direction: column;
@@ -490,5 +480,138 @@ body {
     }
     .wedo__text {
         margin: 0 50px 0;
+    }
+}
+/* #perfomance */
+.perfomance {
+    background-color: #95e1d3;
+    height: 270px;
+}
+.perfomance__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+.perfomance__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    overflow-x: hidden;
+    border-right: 1px solid rgb(255, 255, 255, 0.2);
+}
+.perfomance__wrapper:first-child {
+    border-left: 1px solid rgb(255, 255, 255, 0.2);
+}
+.perfomance__number {
+    color: #fff;
+    font-size: 72px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.perfomance__text {
+    flex-basis: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+@media (max-width: 576px) {
+    .perfomance__wrapper {
+        width: 100%;
+        border-right: none;
+        border-top: 1px solid rgb(255, 255, 255, 0.2);
+    }
+    .perfomance__wrapper:first-child {
+        border-left: none;
+        border-top: none;
+    }
+    .perfomance {
+        height: auto;
+    }
+    .perfomance__container {
+        flex-direction: column;
+    }
+}
+
+/* #work */
+.work-container {
+    text-align: center;
+}
+.work__pretitle {
+    margin: 100px 0 30px;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    line-height: normal;
+}
+.work__title {
+    font-family: "Montserrat";
+    font-size: 30px;
+    line-height: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+.work__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 40px auto 0;
+}
+.work__skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.work__skill-item {
+    text-align: left;
+    display: flex;
+    padding: 50px 0;
+    width: 33.3%;
+}
+.work__skill-item:nth-child(-n + 3) {
+    border-bottom: 1px solid #e5e5e5;
+}
+.work__skill-icon {
+    padding: 5px 25px 0;
+}
+.work__skill-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    margin-bottom: 15px;
+}
+.work__skill-desc {
+    font-family: "Roboto";
+    font-size: 15px;
+}
+@media (max-width: 768px) {
+    .work__skill-item:nth-child(-n + 4) {
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .work__skill-item {
+        width: 50%;
+        padding: 20px 0;
+    }
+}
+@media (max-width: 576px) {
+    .work__skill-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .work__skill-icon {
+        padding-bottom: 10px;
+    }
+    .work__skill-desc {
+        padding: 0 5px;
     }
 }
