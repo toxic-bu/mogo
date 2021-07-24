@@ -79,4 +79,30 @@ window.addEventListener("load", () => {
         }, interval);
     }
     // #main-slider
+    const accordionBtn = document.querySelectorAll(".service__accordion-nav-button");
+    const accordionBtnUp = document.querySelectorAll(".service__accordion-nav-button-up");
+    const accordionBtnDown = document.querySelectorAll(".service__accordion-nav-button-down");
+    const accordionWrapper = document.querySelectorAll(".service__accordion-content-wrapper");
+    accordionWrapper[0].classList.toggle("active");
+    accordionBtnUp[0].classList.toggle("active");
+    accordionBtnDown[0].classList.toggle("active");
+
+    accordionBtn.forEach((elem, i) => {
+        elem.addEventListener("click", function () {
+            accordionWrapper.forEach((elem) => {
+                elem.classList.remove("active");
+            });
+            accordionBtnUp.forEach((elem) => {
+                elem.classList.remove("active");
+            });
+            accordionBtnDown.forEach((elem) => {
+                elem.classList.add("active");
+            });
+            if (!accordionWrapper[i].classList.contains("active")) {
+                accordionWrapper[i].classList.add("active");
+            }
+            accordionBtnUp[i].classList.add("active");
+            accordionBtnDown[i].classList.remove("active");
+        });
+    });
 });
