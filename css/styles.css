@@ -20,8 +20,8 @@ body {
 
 .main {
     height: 100vh;
-    background: linear-gradient(rgb(244, 139, 130, 0.9), rgb(252, 227, 138, 0.9)),
-        center no-repeat url("../img/eagle.png");
+    min-height: 500px;
+    background: linear-gradient(rgb(244, 139, 130, 0.9), rgb(252, 227, 138, 0.9)), center url("../img/eagle.png");
     background-size: cover;
 }
 
@@ -243,7 +243,11 @@ body {
     background-color: #f2ddff;
 }
 @media (max-width: 1200px) {
-    .container {
+    .nav__logo {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .caption {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -462,6 +466,12 @@ body {
     background-color: #f38181;
     margin: 40px auto 0;
 }
+@media (max-width: 1200px) {
+    .wedo__container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 
 @media (max-width: 768px) {
     .wedo-img {
@@ -540,7 +550,7 @@ body {
 }
 
 /* #work */
-.work-container {
+.work__container {
     text-align: center;
 }
 .work__pretitle {
@@ -573,7 +583,7 @@ body {
 .work__skill-item {
     text-align: left;
     display: flex;
-    padding: 50px 0;
+    margin: 50px 0;
     width: 33.3%;
 }
 .work__skill-item:nth-child(-n + 3) {
@@ -592,6 +602,12 @@ body {
 .work__skill-desc {
     font-family: "Roboto";
     font-size: 15px;
+}
+@media (max-width: 1200px) {
+    .work__container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 @media (max-width: 768px) {
     .work__skill-item:nth-child(-n + 4) {
@@ -613,5 +629,80 @@ body {
     }
     .work__skill-desc {
         padding: 0 5px;
+    }
+}
+/* #design */
+.design {
+    height: 100vh;
+    min-height: 600px;
+    background: linear-gradient(rgb(255, 255, 255, 0.85), rgb(255, 255, 255, 0.85)), url("/img/landscape.png") center;
+    background-size: cover;
+}
+.design__container {
+    text-align: center;
+    padding-top: 100px;
+    height: calc(100% - 100px);
+    position: relative;
+}
+.design__pretitle {
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    line-height: normal;
+}
+.design__title {
+    font-family: "Montserrat";
+    font-size: 30px;
+    line-height: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+.design__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 40px auto 0;
+}
+.design__tablet {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    max-width: 470px;
+    overflow: hidden;
+}
+.design__mobile {
+    bottom: -85px;
+    left: 71%;
+    transform: translateX(-50%);
+    position: absolute;
+    max-width: 250px;
+}
+.design__tablet img {
+    transform: translateY(110px);
+    display: block;
+    width: 100%;
+}
+.design__mobile img {
+    display: block;
+    width: 100%;
+}
+@media (max-width: 1200px) {
+    .design__container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media (max-width: 576px) {
+    .design {
+        height: 75vh;
+    }
+    .design__tablet img {
+        transform: translateY(30px);
+    }
+    .design__mobile {
+        bottom: -50px;
     }
 }
