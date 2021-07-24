@@ -243,7 +243,8 @@ body {
     background-color: #f2ddff;
 }
 @media (max-width: 1200px) {
-    .nav__logo {
+    .nav__logo,
+    .nav__burger {
         padding-left: 10px;
         padding-right: 10px;
     }
