@@ -772,6 +772,8 @@ body {
 .service__accordion-content-wrapper {
     border: 0 solid #e5e5e5;
     display: block;
+    padding-left: 20px;
+    padding-right: 20px;
     opacity: 0;
     transition: 0.4s ease-in-out;
 }
@@ -787,7 +789,6 @@ body {
 }
 .service__accordion-content {
     height: 0px;
-
     overflow-x: auto;
     font-family: "Roboto";
     font-style: italic;
