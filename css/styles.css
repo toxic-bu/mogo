@@ -807,7 +807,10 @@ body {
 }
 
 .service__accordion-nav-image {
-    padding: 24px;
+    padding-left: 15px;
+}
+.service__accordion-nav-image img {
+    display: block;
 }
 .service__accordion-nav-button {
     width: 50px;
@@ -817,6 +820,7 @@ body {
     padding-right: 20px;
 }
 .service__accordion-nav-title {
+    margin-left: 15px;
     flex-grow: 1;
 }
 .service__accordion-nav-button-down,
