@@ -20,7 +20,7 @@ body {
 
 .main {
     height: 100vh;
-    min-height: 500px;
+    min-height: 600px;
     background: linear-gradient(rgb(244, 139, 130, 0.9), rgb(252, 227, 138, 0.9)), center url("../img/eagle.png");
     background-size: cover;
 }
@@ -635,7 +635,7 @@ body {
 .design {
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(rgb(255, 255, 255, 0.85), rgb(255, 255, 255, 0.85)), url("/img/landscape.png") center;
+    background: linear-gradient(rgb(255, 255, 255, 0.85), rgb(255, 255, 255, 0.85)), url("../img/landscape.png") center;
     background-size: cover;
 }
 .design__container {
