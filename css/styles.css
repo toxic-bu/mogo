@@ -636,6 +636,7 @@ body {
 .design {
     height: 100vh;
     min-height: 600px;
+    max-height: 1000px;
     background: linear-gradient(rgb(255, 255, 255, 0.85), rgb(255, 255, 255, 0.85)), url("../img/landscape.png") center;
     background-size: cover;
 }
@@ -673,7 +674,6 @@ body {
     max-width: 470px;
     min-width: 200px;
     margin: 0 auto;
-    object-fit: contain;
     overflow: hidden;
 }
 .design__tablet {
