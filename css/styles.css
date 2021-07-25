@@ -638,11 +638,15 @@ body {
     min-height: 600px;
     background: linear-gradient(rgb(255, 255, 255, 0.85), rgb(255, 255, 255, 0.85)), url("../img/landscape.png") center;
     background-size: cover;
+    overflow: hidden;
 }
 .design_container {
     text-align: center;
     padding-top: 100px;
     height: calc(100% - 100px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 .design__pretitle {
@@ -656,7 +660,7 @@ body {
     line-height: normal;
     text-transform: uppercase;
     font-weight: 700;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 .design__title::after {
     content: "";
@@ -666,48 +670,44 @@ body {
     background-color: #f38181;
     margin: 40px auto 0;
 }
-.design__tablet {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
+.design__wrapper {
     max-width: 470px;
-    overflow: hidden;
+    min-width: 200px;
+    margin: 0 auto;
+}
+.design__tablet {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 .design__mobile {
-    bottom: -85px;
-    left: 71%;
-    transform: translateX(-50%);
+    width: 220px;
+    height: auto;
     position: absolute;
-    max-width: 250px;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(60%);
 }
-.design__tablet img {
-    transform: translateY(110px);
-    display: block;
-    width: 100%;
-}
-.design__mobile img {
-    display: block;
-    width: 100%;
-}
+
 @media (max-width: 1200px) {
     .design_container {
         padding-left: 10px;
         padding-right: 10px;
     }
 }
-@media (max-width: 576px) {
-    .design {
-        height: 75vh;
-    }
-    .design__tablet img {
-        transform: translateY(30px);
-    }
+@media (max-width: 768px) {
     .design__mobile {
-        bottom: -50px;
+        left: auto;
+        right: 0;
+        transform: translateX(0%);
     }
 }
-
+@media (max-width: 576px) {
+    .design__mobile {
+        bottom: -50px;
+        width: 180px;
+    }
+}
 /* #service */
 .service_container {
     text-align: center;
@@ -724,7 +724,7 @@ body {
     line-height: normal;
     text-transform: uppercase;
     font-weight: 700;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 .service__title::after {
     content: "";
@@ -732,7 +732,14 @@ body {
     width: 60px;
     height: 3px;
     background-color: #f38181;
-    margin: 40px auto 0;
+    margin: 50px auto 0;
+}
+.service__text {
+    font-family: "Roboto";
+    font-size: 15px;
+    line-height: 1.5em;
+    margin: 0 100px 50px;
+    color: #999999;
 }
 .service__image {
     display: block;
@@ -853,5 +860,10 @@ body {
         max-width: 570px;
     }
     .service__accordion {
+    }
+}
+@media (max-width: 576px) {
+    .service__text {
+        margin: 0 50px 50px;
     }
 }
