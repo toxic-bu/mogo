@@ -638,7 +638,6 @@ body {
     min-height: 600px;
     background: linear-gradient(rgb(255, 255, 255, 0.85), rgb(255, 255, 255, 0.85)), url("../img/landscape.png") center;
     background-size: cover;
-    overflow: hidden;
 }
 .design_container {
     text-align: center;
@@ -674,11 +673,15 @@ body {
     max-width: 470px;
     min-width: 200px;
     margin: 0 auto;
+    object-fit: contain;
+    overflow: hidden;
 }
 .design__tablet {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
 }
 .design__mobile {
     width: 220px;
