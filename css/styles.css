@@ -477,6 +477,8 @@ body {
 @media (max-width: 768px) {
     .wedo-img {
         flex-direction: column;
+        width: 60%;
+        margin: auto;
     }
     .wedo-img-wrapper {
         margin: 20px;
@@ -484,13 +486,19 @@ body {
     .wedo-img-wrapper:last-child {
         margin: 20px;
     }
-}
-@media (max-width: 576px) {
     .wedo__title {
         margin-bottom: 50px;
     }
     .wedo__text {
         margin: 0 50px 0;
+    }
+}
+@media (max-width: 576px) {
+    .wedo__title {
+        margin-bottom: 50px;
+    }
+    .wedo-img {
+        width: 90%;
     }
 }
 /* #perfomance */
@@ -618,6 +626,9 @@ body {
         width: 50%;
         padding: 20px 0;
     }
+    .work__title {
+        margin-bottom: 50px;
+    }
 }
 @media (max-width: 576px) {
     .work__skill-item {
@@ -673,7 +684,8 @@ body {
 .design__wrapper {
     max-width: 470px;
     min-width: 200px;
-    margin: 0 auto;
+    max-height: 500px;
+    margin: auto auto 0;
     overflow: hidden;
 }
 .design__tablet {
@@ -712,6 +724,7 @@ body {
     }
 }
 /* #service */
+
 .service_container {
     text-align: center;
 }
@@ -804,6 +817,7 @@ body {
     font-style: italic;
     font-size: 15px;
     color: #b9b9b9;
+    padding-right: 10px;
     opacity: 0;
     transition: 0.4s ease-in-out;
 }
