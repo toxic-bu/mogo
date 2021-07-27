@@ -79,30 +79,34 @@ window.addEventListener("load", () => {
         }, interval);
     }
     // #main-slider
-    const accordionBtn = document.querySelectorAll(".service__accordion-nav-button");
+    const accordionBtn = document.querySelectorAll(".service__accordion-nav");
     const accordionBtnUp = document.querySelectorAll(".service__accordion-nav-button-up");
     const accordionBtnDown = document.querySelectorAll(".service__accordion-nav-button-down");
     const accordionWrapper = document.querySelectorAll(".service__accordion-content-wrapper");
     accordionWrapper[0].classList.toggle("active");
-    accordionBtnUp[0].classList.toggle("active");
-    accordionBtnDown[0].classList.toggle("active");
+    arrowSwitch();
 
     accordionBtn.forEach((elem, i) => {
         elem.addEventListener("click", function () {
-            accordionWrapper.forEach((elem) => {
-                elem.classList.remove("active");
+            accordionWrapper.forEach((elem, index) => {
+                if (index != i) {
+                    elem.classList.remove("active");
+                } else {
+                    elem.classList.toggle("active");
+                }
+                arrowSwitch();
             });
-            accordionBtnUp.forEach((elem) => {
-                elem.classList.remove("active");
-            });
-            accordionBtnDown.forEach((elem) => {
-                elem.classList.add("active");
-            });
-            if (!accordionWrapper[i].classList.contains("active")) {
-                accordionWrapper[i].classList.add("active");
-            }
-            accordionBtnUp[i].classList.add("active");
-            accordionBtnDown[i].classList.remove("active");
         });
     });
+    function arrowSwitch() {
+        accordionWrapper.forEach((elem, index) => {
+            if (elem.classList.contains("active")) {
+                accordionBtnUp[index].classList.add("active");
+                accordionBtnDown[index].classList.remove("active");
+            } else {
+                accordionBtnUp[index].classList.remove("active");
+                accordionBtnDown[index].classList.add("active");
+            }
+        });
+    }
 });
