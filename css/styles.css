@@ -726,13 +726,13 @@ body {
 /* #service */
 
 .service_container {
-    text-align: center;
 }
 .service__pretitle {
     margin: 100px 0 30px;
     font-family: "Kaushan Script";
     font-size: 24px;
     line-height: normal;
+    text-align: center;
 }
 .service__title {
     font-family: "Montserrat";
@@ -741,6 +741,7 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 50px;
+    text-align: center;
 }
 .service__title::after {
     content: "";
@@ -756,6 +757,7 @@ body {
     line-height: 1.5em;
     margin: 0 100px 50px;
     color: #999999;
+    text-align: center;
 }
 .service__image {
     display: block;
@@ -769,58 +771,79 @@ body {
     height: 380px;
     justify-content: space-between;
 }
-.service__accordion {
-    text-align: start;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
 .service__accordion,
 .service__accordion * {
     box-sizing: border-box;
 }
+.service__accordion-slide:not(:first-child) {
+    margin-top: 10px;
+}
+
 .service__accordion-nav {
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    height: 60px;
-    border: 1px solid #e5e5e5;
     font-family: "Montserrat";
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e5e5e5;
 }
-.service__accordion-nav:not(:first-child) {
-    margin-top: 10px;
+
+.service__accordion-nav-image img {
+    padding: 13px;
+    display: block;
+}
+.service__accordion-nav-title {
+    display: block;
+
+    flex: 1;
+}
+.service__accordion-nav-button {
+    width: 43px;
+    position: relative;
+}
+.service__accordion-nav-button img {
+    position: absolute;
+    display: block;
+    transition: 0.3s;
+    top: 0;
+    transform: translateY(-50%);
+}
+.service__accordion-nav-button-up {
+    opacity: 0;
+}
+.service__accordion-nav-button-down {
+    opacity: 1;
+}
+.service__accordion-slide.active .service__accordion-nav-button-up {
+    opacity: 1;
+}
+.service__accordion-slide.active .service__accordion-nav-button-down {
+    opacity: 0;
 }
 .service__accordion-content-wrapper {
+    padding: 0 20px;
+    transition: all 0.3s ease-out;
     border: 0 solid #e5e5e5;
-    display: block;
-    padding-left: 20px;
-    padding-right: 20px;
-    opacity: 0;
-    transition: 0.4s ease-in-out;
 }
-.service__accordion-content-wrapper.active {
-    border: 1px solid #e5e5e5;
-    opacity: 1;
+.service__accordion-slide.active .service__accordion-content-wrapper {
     padding: 20px;
-    border-top: none;
+    border: 1px solid #e5e5e5;
 }
-.service__accordion-content-wrapper.active .service__accordion-content {
+.service__accordion-slide.active .service__accordion-content {
     height: 140px;
-    opacity: 1;
 }
 .service__accordion-content {
-    height: 0px;
-    overflow-x: auto;
+    overflow: auto;
+    transition: 0.3s ease-out;
+    height: 0;
+    padding-right: 10px;
     font-family: "Roboto";
     font-style: italic;
     font-size: 15px;
     color: #b9b9b9;
-    padding-right: 10px;
-    opacity: 0;
-    transition: 0.4s ease-in-out;
 }
 .service__accordion-content::-webkit-scrollbar {
     width: 5px;
@@ -831,36 +854,6 @@ body {
     border-radius: 5px;
 }
 
-.service__accordion-nav-image {
-    padding-left: 15px;
-}
-.service__accordion-nav-image img {
-    display: block;
-}
-.service__accordion-nav-button {
-    width: 50px;
-    height: 100%;
-    align-self: flex-start;
-    position: relative;
-    padding-right: 20px;
-}
-.service__accordion-nav-title {
-    margin-left: 15px;
-    flex-grow: 1;
-}
-.service__accordion-nav-button-down,
-.service__accordion-nav-button-up {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.3s;
-    opacity: 0;
-}
-.service__accordion-nav-button-down.active,
-.service__accordion-nav-button-up.active {
-    opacity: 1;
-}
 @media (max-width: 1200px) {
     .service_container {
         padding-left: 10px;
@@ -877,8 +870,6 @@ body {
         flex-direction: column;
         max-width: 570px;
         height: auto;
-    }
-    .service__accordion {
     }
 }
 @media (max-width: 576px) {

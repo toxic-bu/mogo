@@ -78,35 +78,17 @@ window.addEventListener("load", () => {
             tabs[i].classList.add("active");
         }, interval);
     }
-    // #main-slider
-    const accordionBtn = document.querySelectorAll(".service__accordion-nav");
-    const accordionBtnUp = document.querySelectorAll(".service__accordion-nav-button-up");
-    const accordionBtnDown = document.querySelectorAll(".service__accordion-nav-button-down");
-    const accordionWrapper = document.querySelectorAll(".service__accordion-content-wrapper");
-    accordionWrapper[0].classList.toggle("active");
-    arrowSwitch();
-
-    accordionBtn.forEach((elem, i) => {
-        elem.addEventListener("click", function () {
-            accordionWrapper.forEach((elem, index) => {
-                if (index != i) {
-                    elem.classList.remove("active");
-                } else {
-                    elem.classList.toggle("active");
+    // #service-slider
+    const serviceSlider = document.querySelectorAll(".service__accordion-slide");
+    serviceSlider[0].classList.toggle("active");
+    serviceSlider.forEach((elem, index) => {
+        elem.addEventListener("click", () => {
+            for (i = 0; i < serviceSlider.length; i++) {
+                if (i != index) {
+                    serviceSlider[i].classList.remove("active");
                 }
-                arrowSwitch();
-            });
+            }
+            elem.classList.toggle("active");
         });
     });
-    function arrowSwitch() {
-        accordionWrapper.forEach((elem, index) => {
-            if (elem.classList.contains("active")) {
-                accordionBtnUp[index].classList.add("active");
-                accordionBtnDown[index].classList.remove("active");
-            } else {
-                accordionBtnUp[index].classList.remove("active");
-                accordionBtnDown[index].classList.add("active");
-            }
-        });
-    }
 });
