@@ -926,7 +926,6 @@ body {
     margin-right: 50px;
     font-family: "Roboto";
     font-size: 24px;
-    font-style: italic;
     color: #b9b9b9;
 }
 .comments__quote {
@@ -964,6 +963,8 @@ body {
         margin: 50px 0 20px;
     }
     .comments__content {
+        font-size: 18px;
+        text-align: center;
         flex-basis: auto;
         margin-bottom: 20px;
     }
@@ -1090,9 +1091,12 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    .team__slide-wrapper {
+        padding: 0 40px;
+    }
     .team__slide-wrapper:not(:last-child) {
         margin-right: 0;
-        margin-bottom: 35px;
+        margin-bottom: 25px;
     }
     .team__slide-caption {
         text-align: right;
