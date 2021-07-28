@@ -91,4 +91,40 @@ window.addEventListener("load", () => {
             elem.classList.toggle("active");
         });
     });
+    // #comments
+    const track = document.querySelector(".comments__track");
+    const btnPrev = document.querySelector(".comments__prev");
+    const btnNext = document.querySelector(".comments__next");
+    const slideWidth = document.querySelector(".comments__item").offsetWidth;
+    const itemsCount = document.querySelectorAll(".comments__item").length;
+    let position = 0;
+    checkBtns();
+
+    btnPrev.addEventListener("click", () => {
+        position += slideWidth;
+        checkBtns();
+        setPosition();
+    });
+    btnNext.addEventListener("click", () => {
+        position -= slideWidth;
+        checkBtns();
+        setPosition();
+        console.log(itemsCount, slideWidth, position);
+    });
+    function setPosition() {
+        track.style.transform = `translateX(${position}px)`;
+    }
+    function checkBtns() {
+        if (position == 0) {
+            btnPrev.setAttribute("disabled", "disabled");
+        } else {
+            btnPrev.removeAttribute("disabled");
+        }
+        console.log(itemsCount, slideWidth, position);
+        if (-((itemsCount - 1) * slideWidth) >= position) {
+            btnNext.setAttribute("disabled", "disabled");
+        } else {
+            btnNext.removeAttribute("disabled");
+        }
+    }
 });
