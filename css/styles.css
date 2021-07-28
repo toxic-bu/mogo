@@ -778,7 +778,6 @@ body {
 .service__accordion-slide:not(:first-child) {
     margin-top: 10px;
 }
-
 .service__accordion-nav {
     cursor: pointer;
     font-family: "Montserrat";
@@ -966,5 +965,143 @@ body {
     }
     .comments__content {
         flex-basis: auto;
+        margin-bottom: 20px;
+    }
+}
+/* #team */
+.team__pretitle {
+    margin: 100px 0 30px;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    line-height: normal;
+    text-align: center;
+}
+.team__title {
+    font-family: "Montserrat";
+    font-size: 30px;
+    line-height: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.team__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 50px auto 0;
+}
+.team__text {
+    font-family: "Roboto";
+    font-size: 15px;
+    line-height: 1.5em;
+    margin: 0 100px 50px;
+    color: #999999;
+    text-align: center;
+}
+.team__content {
+    display: flex;
+    justify-content: space-between;
+}
+.team__slide {
+    position: relative;
+    background-color: #95e1d3;
+}
+.team__slide-wrapper:not(:last-child) {
+    margin-right: 15px;
+}
+.team__slide > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: 0.5s ease-out;
+}
+.team__overlay {
+    background: linear-gradient(rgb(244, 139, 130), rgb(252, 227, 138));
+    opacity: 0;
+    position: absolute;
+    transition: 0.5s ease-out;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.team__slide:hover > img {
+    transform: translate(-10px, -10px);
+}
+.team__slide:hover .team__overlay {
+    transform: translate(-10px, -10px);
+    opacity: 0.9;
+}
+.team__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.team__links li {
+    cursor: pointer;
+    text-align: center;
+    color: #f38181;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fce38a;
+}
+.team__links li i {
+    line-height: 50px;
+    vertical-align: middle;
+}
+.team__links li:hover {
+    color: #fff;
+    background-color: #f38181;
+}
+.team__slide-caption {
+    text-align: center;
+}
+.team__slide-caption-name {
+    margin-top: 25px;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 700;
+    height: 2em;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+.team__slide-caption-job {
+    font-family: "Roboto";
+    font-size: 15px;
+    color: #a6a6a6;
+}
+
+@media (max-width: 1200px) {
+    .team_container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media (max-width: 576px) {
+    .team__content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team__slide-wrapper:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 35px;
+    }
+    .team__slide-caption {
+        text-align: right;
+    }
+    .team__slide-caption-name {
+        margin-top: 5px;
+        height: 1em;
+    }
+    .team__text {
+        margin: 0 50px 20px;
     }
 }
