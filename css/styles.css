@@ -904,7 +904,7 @@ body {
 }
 .comments__prev[disabled="disabled"],
 .comments__next[disabled="disabled"] {
-    opacity: 0.1;
+    opacity: 0.3;
 }
 .comments__next {
     right: 0;
