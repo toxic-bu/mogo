@@ -1005,6 +1005,7 @@ body {
 .team__content {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 .team__slide {
     position: relative;
@@ -1107,5 +1108,35 @@ body {
     }
     .team__text {
         margin: 0 50px 20px;
+    }
+}
+/* #hipster-logos */
+.hipster-logos {
+    background-color: #f8f8f8;
+}
+.container_hipster-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+    flex-wrap: wrap;
+}
+
+.container_hipster-logos img {
+    display: block;
+    width: 100%;
+    max-width: 120px;
+    margin: 0 auto;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .hipster-logos-wrapper {
+        width: 33%;
+        margin: 20px 0;
+    }
+}
+@media (max-width: 576px) {
+    .hipster-logos-wrapper {
+        width: 50%;
     }
 }
