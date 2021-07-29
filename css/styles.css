@@ -1091,6 +1091,7 @@ body {
     .team__content {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 20px;
     }
     .team__slide-wrapper {
         padding: 0 40px;
