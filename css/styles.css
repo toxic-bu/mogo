@@ -1140,3 +1140,61 @@ body {
         width: 50%;
     }
 }
+
+/* #grid */
+.container_grid {
+}
+.grid__imageswrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid__image:hover .grid__overlay {
+    opacity: 0.9;
+}
+.grid__image {
+    position: relative;
+}
+.grid__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.grid__image_double {
+    grid-row: span 2;
+}
+.grid__overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(244, 139, 130), rgb(252, 227, 138));
+    opacity: 0;
+    transition: 0.5s;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.grid__overlay img {
+    width: 30px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.grid__overlay-content {
+}
+.grid__overlay-content-title {
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.grid__overlay-content-text {
+    font-family: "Roboto";
+    font-size: 15px;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .grid__imageswrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
