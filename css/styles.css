@@ -945,10 +945,13 @@ body {
     margin-right: 10px;
 }
 .comments__image {
-    padding: 45px;
     margin-left: 50px;
-    border: 2px solid #95e1d3;
 }
+.comments__image_quote {
+    border: 2px solid #95e1d3;
+    padding: 45px;
+}
+
 .comments__image img {
     display: block;
     margin: auto;

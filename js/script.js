@@ -92,39 +92,35 @@ window.addEventListener("load", () => {
         });
     });
     // #comments
-    const track = document.querySelector(".comments__track");
-    const btnPrev = document.querySelector(".comments__prev");
-    const btnNext = document.querySelector(".comments__next");
-    const slideWidth = document.querySelector(".comments__item").offsetWidth;
-    const itemsCount = document.querySelectorAll(".comments__item").length;
-    let position = 0;
-    checkBtns();
-
-    btnPrev.addEventListener("click", () => {
-        position += slideWidth;
-        checkBtns();
-        setPosition();
-    });
-    btnNext.addEventListener("click", () => {
-        position -= slideWidth;
-        checkBtns();
-        setPosition();
-        console.log(itemsCount, slideWidth, position);
-    });
-    function setPosition() {
+    const sliderCont = document.querySelectorAll(".comments_container");
+    sliderCont.forEach((item) => {
+        let position = 0;
+        const track = item.children[0];
+        const slideWidth = item.children[0].firstElementChild.offsetWidth;
+        const slideCount = item.children[0].childElementCount;
+        const btnNext = item.children[1];
+        const btnPrev = item.children[2];
         track.style.transform = `translateX(${position}px)`;
-    }
-    function checkBtns() {
-        if (position == 0) {
-            btnPrev.setAttribute("disabled", "disabled");
-        } else {
-            btnPrev.removeAttribute("disabled");
-        }
-        console.log(itemsCount, slideWidth, position);
-        if (-((itemsCount - 1) * slideWidth) >= position) {
-            btnNext.setAttribute("disabled", "disabled");
-        } else {
+        checkBtns();
+        btnPrev.addEventListener("click", function () {
+            position += slideWidth;
+            track.style.transform = `translateX(${position}px)`;
+            checkBtns();
+        });
+        btnNext.addEventListener("click", function () {
+            position -= slideWidth;
+            track.style.transform = `translateX(${position}px)`;
+            checkBtns();
+        });
+        function checkBtns() {
             btnNext.removeAttribute("disabled");
+            btnPrev.removeAttribute("disabled");
+            if (position == 0) {
+                btnPrev.setAttribute("disabled", "disabled");
+            }
+            if ((slideCount - 1) * slideWidth <= -position) {
+                btnNext.setAttribute("disabled", "disabled");
+            }
         }
-    }
+    });
 });
