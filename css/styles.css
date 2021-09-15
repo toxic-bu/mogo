@@ -724,8 +724,6 @@ body {
 }
 /* #service */
 
-.service_container {
-}
 .service__pretitle {
     margin: 100px 0 30px;
     font-family: "Kaushan Script";
@@ -769,6 +767,7 @@ body {
     width: 100%;
     height: 380px;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 .service__accordion,
 .service__accordion * {
@@ -877,7 +876,6 @@ body {
 }
 /* #comments */
 .comments {
-    margin-top: 50px;
     background-color: #f8f8f8;
 }
 .comments_container {
@@ -1212,8 +1210,6 @@ body {
     height: auto;
     margin-bottom: 15px;
 }
-.grid__overlay-content {
-}
 .grid__overlay-content-title {
     font-family: "Montserrat";
     font-size: 14px;
@@ -1240,5 +1236,103 @@ body {
 @media (max-width: 576px) {
     .grid__text {
         margin: 0 50px 20px;
+    }
+}
+
+/* #peoplesay */
+.peoplesay {
+    background: linear-gradient(rgb(255, 255, 255, 0.85), rgb(255, 255, 255, 0.85)),
+        url("../img/landscape2.png") center no-repeat;
+    background-size: cover;
+}
+.container_peoplesay {
+    padding-top: 100px;
+}
+.peoplesay__pretitle {
+    margin: 0 0 30px;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    line-height: normal;
+    text-align: center;
+}
+.peoplesay__title {
+    font-family: "Montserrat";
+    font-size: 30px;
+    line-height: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.peoplesay__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 50px auto 0;
+}
+.peoplesay__text {
+    font-family: "Roboto";
+    font-size: 15px;
+    line-height: 1.5em;
+    margin: 0 100px 100px;
+    color: #999999;
+    text-align: center;
+}
+.peoplesay__cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+.peoplesay__card {
+    flex-basis: 50%;
+    display: flex;
+    margin-bottom: 50px;
+    align-items: flex-start;
+}
+.peoplesay__name {
+    margin: 10px 0 0;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.peoplesay__job {
+    margin: 10px 0 0;
+    font-family: "Roboto";
+    font-size: 15px;
+}
+.peoplesay__des {
+    margin-top: 15px;
+    font-family: "Roboto";
+    font-size: 15px;
+    line-height: 1.5em;
+}
+.peoplesay__job:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin-top: 15px;
+}
+.peoplesay__image-wrapper {
+    padding: 0 30px;
+}
+.peoplesay__content {
+    padding-right: 50px;
+}
+@media (max-width: 768px) {
+    .peoplesay__cards {
+        flex-direction: column;
+    }
+    .peoplesay__card {
+        align-items: center;
+    }
+    .peoplesay__content {
+        padding-right: 15px;
+    }
+    .peoplesay__image-wrapper {
+        padding: 0 10px;
     }
 }
