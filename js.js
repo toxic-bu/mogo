@@ -338,19 +338,19 @@
 
 //     return f;
 // };
-function printNumbers(from, to) {
-    let i = from;
-    // console.log(i++);
-    // if (i <= to) {
-    //     setTimeout(printNumbers, 1000, i, to);
-    // }
+// function printNumbers(from, to) {
+//     let i = from;
+//     // console.log(i++);
+//     // if (i <= to) {
+//     //     setTimeout(printNumbers, 1000, i, to);
+//     // }
 
-    let timer = setInterval(() => {
-        if (to >= i) {
-            console.log(i++);
-        } else {
-            clearInterval(timer);
-        }
-    }, 1000);
-}
-printNumbers(1, 4);
+//     let timer = setInterval(() => {
+//         if (to >= i) {
+//             console.log(i++);
+//         } else {
+//             clearInterval(timer);
+//         }
+//     }, 1000);
+// }
+// printNumbers(1, 4);

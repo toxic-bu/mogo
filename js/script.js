@@ -8,8 +8,8 @@ window.addEventListener("load", () => {
         nav.classList.toggle("nav-out");
         body.classList.toggle("fixed");
     });
-    nav.addEventListener("click", (el) => {
-        if (el.target.classList.contains("nav__menu")) {
+    nav.addEventListener("click", (e) => {
+        if (e.target.classList.contains("nav__menu")) {
             nav.classList.toggle("nav-out");
             burger.classList.toggle("burger-active");
             body.classList.toggle("fixed");

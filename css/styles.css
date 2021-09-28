@@ -1272,14 +1272,6 @@ body {
     background-color: #f38181;
     margin: 50px auto 0;
 }
-.peoplesay__text {
-    font-family: "Roboto";
-    font-size: 15px;
-    line-height: 1.5em;
-    margin: 0 100px 100px;
-    color: #999999;
-    text-align: center;
-}
 .peoplesay__cards {
     display: flex;
     flex-wrap: wrap;
@@ -1322,6 +1314,12 @@ body {
 .peoplesay__content {
     padding-right: 50px;
 }
+@media (max-width: 1200px) {
+    .container_peoplesay {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 @media (max-width: 768px) {
     .peoplesay__cards {
         flex-direction: column;
@@ -1332,7 +1330,110 @@ body {
     .peoplesay__content {
         padding-right: 15px;
     }
-    .peoplesay__image-wrapper {
-        padding: 0 10px;
+}
+/* #blog */
+.blog__pretitle {
+    margin: 100px 0 30px;
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    line-height: normal;
+    text-align: center;
+}
+.blog__title {
+    font-family: "Montserrat";
+    font-size: 30px;
+    line-height: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.blog__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    margin: 50px auto 0;
+}
+.blog__cards {
+    display: flex;
+}
+.blog__img {
+    position: relative;
+}
+.blog__img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.blog_singlecard:not(:last-child) {
+    padding-right: 35px;
+}
+.blog__date {
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+    background-color: #95e1d3;
+    width: 60px;
+    height: 70px;
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+    line-height: 55%;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.blog__date-month {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 100%;
+}
+.blog__card-title {
+    font-family: "Montserrat";
+    font-size: 14px;
+}
+.blog__card-text {
+    font-family: "Roboto";
+    font-size: 15px;
+    color: #cccccc;
+}
+.blog__card-stats {
+    font-family: "Roboto";
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.blog__card-stats img {
+    max-width: 100%;
+    height: auto;
+    padding-right: 3px;
+}
+.blog__card-stats img:last-of-type {
+    padding-left: 10px;
+}
+.blog__card-comments {
+}
+@media (max-width: 1200px) {
+    .container_blog {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .blog_singlecard:not(:last-child) {
+        padding-right: 25px;
+    }
+}
+@media (max-width: 576px) {
+    .blog__cards {
+        flex-wrap: wrap;
+    }
+    .blog_singlecard {
+        padding: 20px;
     }
 }
