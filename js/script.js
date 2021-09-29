@@ -124,13 +124,3 @@ window.addEventListener("load", () => {
         }
     });
 });
-let response = await fetch("https://rickandmortyapi.com/api/character");
-
-if (response.ok) {
-    // если HTTP-статус в диапазоне 200-299
-    // получаем тело ответа (см. про этот метод ниже)
-    let json = await response.json();
-    console.log(json);
-} else {
-    console.log("Ошибка HTTP: " + response.status);
-}
