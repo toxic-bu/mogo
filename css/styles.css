@@ -12,6 +12,7 @@ body {
 }
 
 .main_container {
+    padding-top: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -380,6 +381,7 @@ body {
 
 .wedo_container {
     text-align: center;
+    padding-top: 100px;
 }
 .wedo-img {
     display: flex;
@@ -438,7 +440,7 @@ body {
     text-transform: uppercase;
 }
 .wedo__pretitle {
-    margin: 100px 0 30px;
+    margin: 0 0 30px;
     font-family: "Kaushan Script";
     font-size: 24px;
     line-height: normal;
@@ -560,9 +562,10 @@ body {
 /* #work */
 .work_container {
     text-align: center;
+    padding-top: 100px;
 }
 .work__pretitle {
-    margin: 100px 0 30px;
+    margin: 0 0 30px;
     font-family: "Kaushan Script";
     font-size: 24px;
     line-height: normal;
@@ -723,9 +726,11 @@ body {
     }
 }
 /* #service */
-
+.service_container {
+    padding-top: 100px;
+}
 .service__pretitle {
-    margin: 100px 0 30px;
+    margin: 0 0 30px;
     font-family: "Kaushan Script";
     font-size: 24px;
     line-height: normal;
@@ -1332,8 +1337,11 @@ body {
     }
 }
 /* #blog */
+.container_blog {
+    padding-top: 100px;
+}
 .blog__pretitle {
-    margin: 100px 0 30px;
+    margin: 0 0 30px;
     font-family: "Kaushan Script";
     font-size: 24px;
     line-height: normal;
