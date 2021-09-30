@@ -1672,8 +1672,37 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+    .footer__wraper {
+        flex-direction: column-reverse;
+    }
+    .footer__mogo {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .footer__inst {
+        text-align: center;
+        width: 270px;
+        margin-left: auto;
+        margin-right: auto;
+        flex: auto;
+    }
+    .footer__blog-title {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .footer__blog {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer__mogo-follow span {
+        margin-right: 0;
+        margin-bottom: 10px;
+        display: block;
+    }
 }
+
 .footer__caption {
     text-align: center;
     font-family: "Montserrat";
