@@ -1460,6 +1460,9 @@ body {
     .blog__cards {
         flex-wrap: wrap;
     }
+    .blog_singlecard:not(:last-child) {
+        margin-right: 0;
+    }
     .blog_singlecard {
         padding: 20px;
     }
@@ -1571,7 +1574,7 @@ body {
 .footer__mogo-button {
     cursor: pointer;
     color: #fff;
-    padding: 0;
+    padding: 0 5px;
     font-weight: 700;
     font-size: 14px;
     box-sizing: border-box;
