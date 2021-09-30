@@ -43,7 +43,9 @@ body {
 .nav__burger {
     display: none;
 }
-
+.nav__link:not(:last-child) {
+    margin-right: 5px;
+}
 .nav__link a {
     color: #ffffff;
     font-family: "Montserrat";
@@ -243,7 +245,9 @@ body {
     background-color: #f2ddff;
 }
 @media (max-width: 1200px) {
-    .nav__logo,
+    .nav {
+        padding: 0 10px;
+    }
     .nav__burger {
         padding-left: 10px;
         padding-right: 10px;
@@ -531,10 +535,9 @@ body {
     font-size: 72px;
     font-family: "Montserrat";
     font-weight: 700;
-    margin-bottom: 20px;
+    line-height: 1em;
 }
 .perfomance__text {
-    flex-basis: 50px;
     text-transform: uppercase;
     color: #fff;
     font-size: 14px;
@@ -543,6 +546,7 @@ body {
 }
 @media (max-width: 576px) {
     .perfomance__wrapper {
+        padding: 20px 0;
         width: 100%;
         border-right: none;
         border-top: 1px solid rgb(255, 255, 255, 0.2);
@@ -864,11 +868,11 @@ body {
 }
 @media (max-width: 992px) {
     .service_container {
-        padding: 100px 10px 20px;
+        padding: 100px 10px 10px;
     }
     .service__image {
         max-width: 100%;
-        margin: 0 0 20px;
+        margin: 0 0 10px;
     }
     .service__content {
         margin: 0 auto;
@@ -1442,8 +1446,6 @@ body {
 }
 .blog__card-stats img:last-of-type {
     padding-left: 10px;
-}
-.blog__card-comments {
 }
 @media (max-width: 1200px) {
     .container_blog {
