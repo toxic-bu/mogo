@@ -864,7 +864,7 @@ body {
 }
 @media (max-width: 992px) {
     .service_container {
-        padding: 100px 0 50px;
+        padding: 100px 10px 20px;
     }
     .service__image {
         max-width: 100%;
