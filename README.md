@@ -1,4 +1,4 @@
-# mogo
+# Mogo template
 # Stack: 
 Native JS, CSS, HTML
 # Deployed: 
