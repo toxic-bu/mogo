@@ -1,7 +1,7 @@
-## Mogo template
+## Mogo adaptive single-page template
 
-### Stack: 
+### Stack
 Native JS, CSS, HTML
 
-### Deployed: 
+### Deployed
 https://toxic-by.github.io/mogo/
