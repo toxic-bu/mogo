@@ -1,5 +1,5 @@
 # Mogo template
-# Stack: 
+## Stack: 
 Native JS, CSS, HTML
-# Deployed: 
+## Deployed: 
 https://toxic-by.github.io/mogo/
